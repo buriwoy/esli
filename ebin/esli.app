@@ -1,0 +1,9 @@
+{application,esli,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{esli_app,[]}},
+              {env,[]},
+              {modules,[esli_acceptor,esli_app,esli_gate,esli_handler,
+                        esli_http,esli_req,esli_router,esli_sup,esli_tcp]}]}.
