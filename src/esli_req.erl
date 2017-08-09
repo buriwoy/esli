@@ -1,6 +1,6 @@
 -module(esli_req).
 -export([parse/1, qs/1, get_params/1]).
--record(req, {
+%%-record(req, {
 %%  method = <<"GET">> :: binary(),
 %%  host = undefined :: binary(),
 %%  path = <<"/">>,
@@ -13,10 +13,11 @@
 %%  accept = undefined :: binary(),
 %%  accept_encoding = undefined :: binary(),
 %%  accept_language = undefined :: binary()
-  method, host, path, user_agent, referer, connection,
-  pragma, cache_control, upgrade_insecure_requests, qs,
-  accept, accept_language, accept_encoding, get_params
-}).
+
+%%  method, host, path, user_agent, referer, connection,
+%%  pragma, cache_control, upgrade_insecure_requests, qs,
+%%  accept, accept_language, accept_encoding, get_params
+%%}).
 
 parse (Data) when is_binary(Data) ->
   [Header, Body] = binary:split(Data, <<"\r\n\r\n">>),
